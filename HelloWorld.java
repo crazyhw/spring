@@ -1,5 +1,4 @@
-package com.edu.software.controller;
-
+package yjx;
 public class HelloWorld {
     public String name;
 
