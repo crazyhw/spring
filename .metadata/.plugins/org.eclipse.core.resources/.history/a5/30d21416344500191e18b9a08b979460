@@ -1,0 +1,12 @@
+package sun1server;
+
+import org.springframework.stereotype.Service;
+
+public class usermange implements user {
+     @Service
+	public void say() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

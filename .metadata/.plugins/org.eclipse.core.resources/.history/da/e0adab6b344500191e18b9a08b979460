@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <context:component-scan base-package="sunserver1" use-default-filters="false">  
+
+              <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>      
+
+        </context:component-scan>
+
+ </beans>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.edu.zut.cs.software</groupId>
+  <artifactId>sun1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>userserver1</module>
+  	<module>usemange</module>
+  	<module>sun1server</module>
+  	<module>userweb</module>
+  </modules>
+  
+  <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+<dependencies>
+<dependency>
+
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>5.1.5.RELEASE</version>
+</dependency>
+  </dependencies>
+  
+</project>

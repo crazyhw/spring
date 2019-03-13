@@ -1,0 +1,5 @@
+package usermange;
+
+public interface user {
+
+}

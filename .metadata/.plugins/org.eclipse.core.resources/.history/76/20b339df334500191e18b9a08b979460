@@ -1,0 +1,10 @@
+package sun1server;
+
+public class usermange implements user {
+
+	public void say() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
