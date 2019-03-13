@@ -5,7 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-03-11T10:40:09Z</updated>
+  <updated>2019-03-11T10:40:00Z</updated>
   <entry>
     <title>Memory footprint of the JVM</title>
     <link rel="alternate" href="https://spring.io/blog/2019/03/11/memory-footprint-of-the-jvm" />
@@ -14,10 +14,11 @@
       <name>Andy Wilkinson</name>
     </author>
     <id>tag:spring.io,2019-03-07:3598</id>
-    <updated>2019-03-11T10:40:09Z</updated>
+    <updated>2019-03-11T10:40:00Z</updated>
     <content type="html">&lt;p&gt;The JVM can be a complex beast. Thankfully, much of that complexity is under the hood, and we as application developers and deployers often don&amp;rsquo;t have to worry about it too much. With the rise of container-based deployment strategies, one area of complexity that needs some attention is the JVM&amp;rsquo;s memory footprint.&lt;/p&gt;&lt;h2&gt;&lt;a href="#two-kinds-of-memory" class="anchor" name="two-kinds-of-memory"&gt;&lt;/a&gt;Two kinds of memory&lt;/h2&gt;
 &lt;p&gt;The JVM divides its memory into two main categories: heap memory and non-heap memory. Heap memory is the part with which people are typically the most familiar. It&amp;rsquo;s where objects that are created by the application are stored. They remain there until they are no longer referenced and are garbage collected. Typically, the amount of heap that an application is using will fluctuate as a function of the current load.&lt;/p&gt;
-&lt;p&gt;The JVM&amp;rsquo;s non-heap memory is divided into several different areas. Let&amp;rsquo;s illustrate this by looking at an application, in this case our old friend, Petclinic. We can use the HotSpot VM&amp;rsquo;s &lt;a href="https://docs.oracle.com/javase/8/docs/technotes/guides/vm/nmt-8.html"&gt;native memory tracking (NMT)&lt;/a&gt; to examine its memory usage by starting the application with &lt;code&gt;-Xmx48M -XX:NativeMemoryTracking=summary&lt;/code&gt; and then using &lt;code&gt;jcmd &amp;lt;pid&amp;gt; VM.native_memory summary&lt;/code&gt; to display the summary. The following pie chart shows the JVM&amp;rsquo;s memory usage as reported by NMT (minus its own overhead):&lt;/p&gt;
+&lt;p&gt;The JVM&amp;rsquo;s non-heap memory is divided into several different areas. We can use the HotSpot VM&amp;rsquo;s &lt;a href="https://docs.oracle.com/javase/8/docs/technotes/guides/vm/nmt-8.html"&gt;native memory tracking (NMT)&lt;/a&gt; to examine its memory usage across these areas. Note that, while NMT does not track all native memory usage (it &lt;a href="https://docs.oracle.com/javase/8/docs/technotes/guides/vm/nmt-8.html"&gt;does not track third party native code memory allocations&lt;/a&gt;, for example), it is sufficient for a large class of typical Spring applications. NMT can be used by starting the application with &lt;code&gt;-XX:NativeMemoryTracking=summary&lt;/code&gt; and then using &lt;code&gt;jcmd &amp;lt;pid&amp;gt; VM.native_memory summary&lt;/code&gt; to display the memory usage summary.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s illustrate the use of NMT by looking at an application, in this case our old friend, Petclinic. The following pie chart shows the JVM&amp;rsquo;s memory usage as reported by NMT (minus its own overhead) when starting Petclinic with a 48MB max heap (&lt;code&gt;-Xmx48M&lt;/code&gt;):&lt;/p&gt;
 &lt;center&gt;&#xD;
 &lt;img width=50% height=50% src="https://static.spring.io/blog/wilkinsona/20190311/memory-usage.png"&gt;&lt;/img&gt;&#xD;
 &lt;/center&gt;
