@@ -3,8 +3,8 @@ package com.edu.zut.cs.software;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Component("usemange")
-@Service
+//@Component("usemange")      //¿ØÖÆ²ã 
+@Service("usemange")          //·þÎñ²ã
 public class Usemange implements Use {
 
 	    private String name = "ddh";
