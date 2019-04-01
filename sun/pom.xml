@@ -71,6 +71,7 @@
 
 
 	<build>
+	  <pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -93,6 +94,7 @@
 				<version>2.21.0</version>
 			</plugin>
 		</plugins>
+		</pluginManagement>
 	</build>
 
 
