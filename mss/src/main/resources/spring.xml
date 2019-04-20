@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd  
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd 
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop.xsd">
+	<!-- 加载config资源文件 其中包含变量信息，必须在Spring配置文件的最前面加载，即第一个加载 -->
+	<context:property-placeholder location="classpath:config.properties"/>
+	<!-- 自动扫描dao和service包(自动注入) 排除过滤@Controller-->
+	<context:component-scan base-package="com.chronos.mssh">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+ 
+	<!-- 配置数据源 阿里druid -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" 
+			init-method="init" destroy-method="close">
+	 	<!-- 数据库驱动 -->
+        <property name="driverClassName" value="${driverClass}" />
+        <!-- 基本属性 url、user、password -->
+        <property name="url" value="${url}" />
+        <property name="username" value="${user}" />
+        <property name="password" value="${password}" />
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="initialSize" value="${initialSize}" />
+        <property name="minIdle" value="${minIdle}" /> 
+        <property name="maxActive" value="${maxActive}" />
+        <!-- 配置获取连接等待超时的时间 6000-->
+        <property name="maxWait" value="${maxWait}" />
+         <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+        <property name="validationQuery" value="SELECT 'x'" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+        
+        <!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+        <property name="poolPreparedStatements" value="true" />
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
+        <!-- 配置监控统计拦截的filters -->
+        <!-- <property name="filters" value="stat" />  -->
+	
+	</bean>
+	
+	<!-- session Factory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/> <!-- 数据源 -->
+		<property name="hibernateProperties"> <!-- hibernate属性 -->
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>			<!-- sql方言 -->
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop> 		<!-- 输出sql到控制台 -->
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>		<!-- 打印漂亮的sql -->
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop> <!-- 自动创建|更新|验证数据库表结构 -->
+				<prop key="current_session_context_class">thread</prop>      
+                <prop key="hibernate.connection.driver_class" >${driverClass}</prop>
+                <!-- 使用二级缓存和查询缓存，提高性能 -->
+    			<!-- <prop key="hibernate.cache.use_query_cache">true</prop>
+    			<prop key="hibernate.cache.provider_class">
+     				org.hibernate.cache.EhCacheProvider
+    			</prop> -->
+			</props>
+		</property>
+		<!--1、 自动扫描注解方式配置的hibernate类文件 -->
+		<!-- <property name="packagesToScan">
+			<list>
+				<value>com.chronos.mssh.model</value>
+			</list>
+		</property>  -->
+		<!--2、 映射配置文件*.hbm.xml -->
+		 <property name="mappingLocations">  <!-- mappingResources、mappingLocations、mappingDirectoryLocations、mappingJarLocations -->  
+			<value>classpath:/com/chronos/mssh/model/*.hbm.xml</value>
+		</property> 
+	</bean>
+ 
+ 
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!--1、 注解方式配置事务 -->
+	<!-- <tx:annotation-driven transaction-manager="transactionManager"/> -->
+	
+	<!--2、 拦截方式配置事务 -->
+	<tx:advice id="transactionAdvice" transaction-manager="transactionManager"> <!-- 事务通知定义 -->
+		<tx:attributes> <!-- 指定拦截的方法 -->
+			<tx:method name="save*" propagation="REQUIRED"/><!-- propagation传播行为 -->
+			<tx:method name="add*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="modify*" propagation="REQUIRED"/>
+			<tx:method name="edit*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED"/>
+			<tx:method name="remove*" propagation="REQUIRED"/>
+				
+			<tx:method name="*" propagation="REQUIRED"/> <!-- 拦截其它所有* -->
+		</tx:attributes>
+	</tx:advice>
+	<aop:config> <!-- aop相关配置 -->
+		<aop:pointcut id="aopPointcut" expression="execution(* com.chronos.mssh.service..*Impl.*(..))" /> <!-- 切入点定义 -->
+		<aop:advisor pointcut-ref="aopPointcut" advice-ref="transactionAdvice"/> <!-- 通知Advisor定义 -->
+	</aop:config>
+	
+</beans>

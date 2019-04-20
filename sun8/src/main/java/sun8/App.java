@@ -32,15 +32,30 @@ public class App {
        /* Session session = rtn();
     	
         session.getTransaction().begin();*/
-    	Configuration config=new Configuration().configure(); SessionFactory 
-    	sessionFactory=config.buildSessionFactory();
-    	Session session = sessionFactory.openSession();
+    	Configuration config=new Configuration().configure();     
+    	
+    	SessionFactory sessionFactory=config.buildSessionFactory();  //派生SessionFactor
+    	Session session = sessionFactory.openSession();              //派生实例化对象session     
         User u=new User();
-         u.setId(1235);
-        u.setName("李华");
+         u.setId(1236);
+        u.setName("王华");
         u.setAge(20);
         session.save(u);
         session.getTransaction().commit();
+    	// 提交事务
+	
+		// 回滚事务
+		session.getTransaction().rollback();
+		if (session != null) {
+		if (session.isOpen()) {
+				// 关闭session
+		session.close();
+
+        
+        
+        
     }
 
+}
+		}
 }

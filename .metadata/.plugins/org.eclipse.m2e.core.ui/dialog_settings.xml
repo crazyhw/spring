@@ -2,14 +2,16 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.zut.cs.sofware"/>
+			<item value="com.zut.edu.zut"/>
+			<item value="com.edu.zut"/>
+			<item value="com.edu.zut.cs"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="webserveer"/>
-			<item value="sun"/>
-			<item value="web"/>
+			<item value="s2"/>
+			<item value="s1"/>
+			<item value="sun9"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -26,6 +28,14 @@
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.ui.internal.wizards.MavenProjectSelectionDialog">
 		<item value="480" key="width"/>
@@ -46,6 +56,8 @@
 	</section>
 	<section name="MavenModuleWizardParentPage">
 		<list key="moduleName">
+			<item value="sun3-web"/>
+			<item value="sun3-server"/>
 			<item value="webserveer"/>
 			<item value="web"/>
 			<item value="userserver"/>
@@ -63,6 +75,12 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\java\spring"/>
+			<item value="D:\java\spring\str\src\main\java\str\Exe.java"/>
+			<item value="D:\java\spring\sun8\src\main\java\sun8\User.java"/>
+			<item value="D:\java\spring\sun7\src\main\java\com\edu\zut\cs\dao"/>
+			<item value="D:\java\spring\sun3"/>
+			<item value="D:\java\spring\mq\src\mq\sender.java"/>
 			<item value="D:\java\spring\sun"/>
 			<item value="D:\java\spring\sun\userserver"/>
 		</list>
@@ -77,13 +95,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.webserveer"/>
 		</list>
 		<list key="groupId">
-			<item value="com.zut.cs.sofware"/>
 		</list>
 		<list key="artifactId">
-			<item value="webserveer"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

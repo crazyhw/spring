@@ -6,6 +6,7 @@
 <hibernate-configuration>
 
     <session-factory>
+        <property name="hbm2ddl.auto">update</property>    
         <property name="dialect">
             org.hibernate.dialect.MySQLDialect
         </property>
@@ -18,11 +19,13 @@
         <property name="connection.username">root</property>
         <property name="connection.password">q4x1m5h6</property>
         <property name="connection.driver_class">
+         <!--  property name=” hibernate.connection.isolation”>4-->
             com.mysql.jdbc.Driver
         </property>
     
         <property name="show_sql">true</property>
-        
+        <!--采用注解的方式代替映射文件  -->
         <mapping class="sun8.User"/>
+        
     </session-factory>
 </hibernate-configuration>

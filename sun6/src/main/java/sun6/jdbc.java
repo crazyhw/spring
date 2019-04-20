@@ -14,19 +14,19 @@ public class jdbc {
 	    }
 	    try {
 	      Connection connect = DriverManager.getConnection(
-	          "jdbc:mysql://localhost:3306/student ?serverTimezone=UTC","root","q4x1m5h6"  );
-	         // "jdbc:mysql://202.196.37.168:3306/dream ?serverTimezone=UTC","student","Student_123456"  );
+	          //"jdbc:mysql://localhost:3306/student ?serverTimezone=UTC","student","Student_123456"  );
+	          "jdbc:mysql://202.196.37.168:3306/dream ?serverTimezone=UTC","student","Student_123456"  );
 	           //连接URL为   jdbc:mysql//服务器地址/数据库名  ，后面的2个参数分别是登陆用户名和密码
 
 	      System.out.println("Success connect Mysql server!");
 	      Statement stmt = connect.createStatement();
-	      ResultSet rs = stmt.executeQuery("select * from studentinfo");
+	      ResultSet rs = stmt.executeQuery("select * from T_STUDENT");
 	                                                          //user 为你表的名称
 	     // ResultSet rs = stmt.executeQuery("select * from T_student");
 	while (rs.next()) {
 	    
-		  System.out.println(rs.getString("name"));
-	        System.out.println(rs);
+		  System.out.println(rs.getString("fullName")+" " +rs.getString("code"));
+	        //System.out.println(rs);
 		      
 	      }
 	    }
