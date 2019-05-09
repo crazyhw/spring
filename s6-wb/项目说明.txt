@@ -1,0 +1,21 @@
+建立工程的前期准备:
+1.在eclipes下载相关java开发组件如有就不需要下载方便建立动态web工程
+2.在eclipe中配置tomcat有可能遇到端口占用问题最常见的就是8080，8009这两个个端口
+<Server port="8005" shutdown="SHUTDOWN">
+ <Connector port="8009" protocol="AJP/1.3" redirectPort="8443"/>
+    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+
+3.项目构建后在属性中配置服务器然后在服务器上运行项目
+用到的主要架包有:
+javax.servlet 须有相应的配置文件
+建立web-mvc工程一般步骤：
+1.建立动态web工程
+2.配置请求处理器
+3.配置控制器请求器负责接收请求然后先匹配如能找到对应的映射交由处理器处理
+4.配置视图处理器
+得到返回的视图名通过视图解析器得到真正视图对象然后将数据模型和视图对象一起交给视图
+遇到的错误:
+The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.
+原因:服务器找不到该资源jsp文件。jsp文件是放在WEB-INF 文件夹下面的。 WEB-INF文件下的 jsp文件用户是不能直接访问到的是受保护的。
+
+因此把jsp文件 挪到  WebContent文件下即可了。
