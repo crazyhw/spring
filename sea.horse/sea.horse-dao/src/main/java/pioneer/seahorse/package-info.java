@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author Geek
+ * @author Angus
  *
  */
 package pioneer.seahorse;
