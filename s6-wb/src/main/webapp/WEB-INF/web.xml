@@ -1,0 +1,31 @@
+<!-- 配置DispatcherServlet -->
+<web-app >
+  <display-name>Archetype Created Web Application</display-name>
+ 
+  
+  <servlet>
+     <servlet-name>dispatcher</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      
+       <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:springContext.xml</param-value>
+      </init-param>
+      <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+      <servlet-name>dispatcher</servlet-name>
+      <url-pattern>/</url-pattern>
+  </servlet-mapping>
+ 
+  <listener>
+      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+   <context-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:springContext.xml</param-value>
+       <param-value>/resources/springContext.xml</param-value>
+  </context-param>
+</web-app>
+
