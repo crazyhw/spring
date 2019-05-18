@@ -1,1 +1,15 @@
-org\sea\horse\base\App.class
+pioneer\seahorse\base\dao\GenericTreeDaoTestCase.class
+pioneer\seahorse\base\service\GenericManagerTestCase.class
+pioneer\seahorse\base\BaseAbstractTestCase.class
+pioneer\seahorse\base\domain\BaseTreeEntity.class
+pioneer\seahorse\base\service\Impl\GenericTreeManagerImpl.class
+pioneer\seahorse\base\service\GenericGenerator.class
+pioneer\seahorse\base\service\GenericManager.class
+pioneer\seahorse\base\service\GenericTreeManager.class
+pioneer\seahorse\base\dao\GenericTreeDao.class
+pioneer\seahorse\base\service\Impl\GenericManagerImpl.class
+pioneer\seahorse\base\dao\GenericDao.class
+pioneer\seahorse\base\dao\GenericDaoTestCase.class
+pioneer\seahorse\base\service\GenericTreeManagerTestCase.class
+pioneer\seahorse\base\domain\BaseDomain.class
+pioneer\seahorse\base\domain\BaseEntity.class

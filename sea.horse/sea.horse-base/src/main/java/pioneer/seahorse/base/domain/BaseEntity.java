@@ -1,0 +1,127 @@
+package pioneer.seahorse.base.domain;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@MappedSuperclass
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
+@Access(value= AccessType.FIELD)
+public class BaseEntity extends BaseDomain {
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = -6163675075289529459L;
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "DATECREATED")
+    protected Date dateCreated = new Date();
+
+    /**
+     * 实体修改时间
+     */
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "DATEMODIFIED")
+    protected Date dateModified = new Date();
+
+    /**
+     * 实体是否被删除
+     */
+    @Column(name = "DELETED")
+    protected Boolean deleted;
+
+    @Column(name = "ENTITY_NAME")
+    protected String entityName;
+
+    @Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    protected String id;
+
+    @Version
+    @Access(AccessType.FIELD)
+    private long version;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (null != obj) {
+            if (obj instanceof BaseEntity) {
+                BaseEntity domain = (BaseEntity) obj;
+                if (this.id == domain.id) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
+    public Date getDateCreated() {
+        return dateCreated;
+    }
+
+
+
+
+    public Date getDateModified() {
+        return dateModified;
+    }
+
+
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+
+    public String getEntityName() {
+        return entityName;
+    }
+
+
+    public String getId() { return id; }
+
+
+    @Override
+    public int hashCode() {
+        if (this.id == null) {
+            this.id = String.valueOf(Long.valueOf(0));
+        }
+        return HashCodeBuilder.reflectionHashCode(this.id);
+    }
+
+
+    public void setDateCreated(Date dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+
+    public void setDateModified(Date dateModified) {
+        this.dateModified = dateModified;
+    }
+
+
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
+    }
+
+
+    public void setEntityName(String entityName) {
+        this.entityName = entityName;
+    }
+
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
+    }
+
+}
