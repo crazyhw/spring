@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: pioneer.seahorse.cargo_shelves.dao.ShelvesDaoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.076 s <<< FAILURE! - in pioneer.seahorse.cargo_shelves.dao.ShelvesDaoTest
+testGetRoot(pioneer.seahorse.cargo_shelves.dao.ShelvesDaoTest)  Time elapsed: 0.076 s  <<< ERROR!
+org.springframework.orm.jpa.JpaSystemException: Unknown integral data type for ids : java.lang.String; nested exception is org.hibernate.id.IdentifierGenerationException: Unknown integral data type for ids : java.lang.String
+	at pioneer.seahorse.cargo_shelves.dao.ShelvesDaoTest.testGetRoot(ShelvesDaoTest.java:45)
+Caused by: org.hibernate.id.IdentifierGenerationException: Unknown integral data type for ids : java.lang.String
+	at pioneer.seahorse.cargo_shelves.dao.ShelvesDaoTest.testGetRoot(ShelvesDaoTest.java:45)
+
