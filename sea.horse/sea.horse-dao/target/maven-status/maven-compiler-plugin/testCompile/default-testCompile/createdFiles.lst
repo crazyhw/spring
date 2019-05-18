@@ -1,1 +1,2 @@
-org\sea\horse\dao\AppTest.class
+pioneer\seahorse\cargo\dao\CargoDaoTest.class
+pioneer\seahorse\student\dao\StudentDaoTest.class

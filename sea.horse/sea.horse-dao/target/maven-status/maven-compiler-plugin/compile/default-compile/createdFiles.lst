@@ -1,1 +1,4 @@
-org\sea\horse\dao\App.class
+pioneer\seahorse\student\domain\Student.class
+pioneer\seahorse\cargo\dao\CargoDao.class
+pioneer\seahorse\cargo\domain\Cargo.class
+pioneer\seahorse\student\dao\StudentDao.class

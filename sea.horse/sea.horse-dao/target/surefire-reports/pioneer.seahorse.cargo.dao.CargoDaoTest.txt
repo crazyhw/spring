@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pioneer.seahorse.cargo.dao.CargoDaoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.106 s - in pioneer.seahorse.cargo.dao.CargoDaoTest
