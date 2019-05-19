@@ -1,0 +1,12 @@
+pioneer\seahorse\cargo_shelves\domain\Shelves.class
+pioneer\seahorse\admin\dao\GroupDao.class
+pioneer\seahorse\cargo_shelves\dao\ShelvesDao.class
+pioneer\seahorse\admin\domain\Role.class
+pioneer\seahorse\cargo_shelves\dao\CargoDao.class
+pioneer\seahorse\admin\dao\UserDao.class
+pioneer\seahorse\student\dao\StudentDao.class
+pioneer\seahorse\admin\domain\Group.class
+pioneer\seahorse\student\domain\Student.class
+pioneer\seahorse\admin\domain\User.class
+pioneer\seahorse\admin\dao\RoleDao.class
+pioneer\seahorse\cargo_shelves\domain\Cargo.class
