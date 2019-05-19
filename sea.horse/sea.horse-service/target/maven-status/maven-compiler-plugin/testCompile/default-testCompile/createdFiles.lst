@@ -1,1 +1,8 @@
-org\sea\horse\service\AppTest.class
+pioneer\seahorse\admin\service\UserManagerTest.class
+pioneer\seahorse\cargo_shelves\service\CargoManagerTest.class
+pioneer\seahorse\cargo_shelves\service\ShelvesManagerTest.class
+pioneer\seahorse\admin\service\GroupGenerator.class
+pioneer\seahorse\student\service\StudentManagerTest.class
+pioneer\seahorse\cargo_shelves\service\ShelvesGenerator.class
+pioneer\seahorse\admin\service\GroupManagerTest.class
+pioneer\seahorse\service\AppTest.class
