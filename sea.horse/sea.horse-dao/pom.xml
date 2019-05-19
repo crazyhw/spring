@@ -16,6 +16,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -34,25 +40,6 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.15</version>
 		</dependency>
-      <dependency>
-          <groupId>org.springframework</groupId>
-          <artifactId>spring-orm</artifactId>
-          <version>5.1.6.RELEASE</version>
-          <scope>compile</scope>
-      </dependency>
-	  <dependency>
-		  <groupId>pioneer</groupId>
-		  <artifactId>sea.horse-base</artifactId>
-		  <version>0.0.1-SNAPSHOT</version>
-		  <scope>compile</scope>
-	  </dependency>
-	  <dependency>
-		  <groupId>junit</groupId>
-		  <artifactId>junit</artifactId>
-		  <version>4.12</version>
-		  <scope>test</scope>
-	  </dependency>
-
   </dependencies>
   <build>
 		<plugins>
@@ -66,12 +53,12 @@
 					<scriptAction>drop-and-create</scriptAction>
 					<databaseAction>drop-and-create</databaseAction>
 					<vendor>hibernate</vendor>
-					<packageToScan>pioneer.seahorse</packageToScan>
+					<packageToScan>edu.zut.cs.software</packageToScan>
 					<jdbcDriver>com.mysql.cj.jdbc.Driver</jdbcDriver>
-					<jdbcUrl>jdbc:mysql://202.196.37.168:3306/seahorse</jdbcUrl>
+					<jdbcUrl>jdbc:mysql://202.196.37.168:3306/sun</jdbcUrl>
 					<jdbcUser>student</jdbcUser>
 					<jdbcPassword>Student_123456</jdbcPassword>
-					<!--<hibernate.dialect>org.hibernate.dialect.MySQL5InnoDBDialect</hibernate.dialect>-->
+					<hibernate.dialect>org.hibernate.dialect.MySQL5InnoDBDialect</hibernate.dialect>
 					<properties>
 						<hibernate.dialect>org.hibernate.dialect.MySQL5InnoDBDialect</hibernate.dialect>
 					</properties>
