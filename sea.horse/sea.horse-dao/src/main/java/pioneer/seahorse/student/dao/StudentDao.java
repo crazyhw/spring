@@ -1,7 +1,10 @@
 package pioneer.seahorse.student.dao;
 
-import pioneer.seahorse.student.domain.Student;
+import org.springframework.stereotype.Repository;
 import pioneer.seahorse.base.dao.GenericDao;
+import pioneer.seahorse.student.domain.Student;
 
-public interface StudentDao extends GenericDao<Student,Long> {
+@Repository("studentDao")
+public interface StudentDao extends GenericDao<Student, Long> {
+
 }

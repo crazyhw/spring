@@ -52,17 +52,6 @@
 		  <version>4.12</version>
 		  <scope>test</scope>
 	  </dependency>
-      <dependency>
-          <groupId>pioneer</groupId>
-          <artifactId>sea.horse-base</artifactId>
-          <version>0.0.1-SNAPSHOT</version>
-          <scope>test</scope>
-      </dependency>
-	  <dependency>
-		  <groupId>pioneer</groupId>
-		  <artifactId>sea.horse-base</artifactId>
-		  <version>0.0.1-SNAPSHOT</version>
-	  </dependency>
 
   </dependencies>
   <build>

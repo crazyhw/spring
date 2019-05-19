@@ -12,8 +12,6 @@ import javax.persistence.Table;
 public class Student extends BaseEntity {
     @Column(name = "num")
     Integer num;
-    @Column(name = "id")
-    String id;
     @Column(name = "name")
     String name;
     @Column(name = "sex")
@@ -27,15 +25,6 @@ public class Student extends BaseEntity {
 
     public void setNum(Integer num) {
         this.num = num;
-    }
-
-    @Override
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {

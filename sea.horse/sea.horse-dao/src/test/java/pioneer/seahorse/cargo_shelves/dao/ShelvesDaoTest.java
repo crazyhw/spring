@@ -11,16 +11,8 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- *
- * 事务回滚
- * @author 研哥哥
- *
- */
 public class ShelvesDaoTest extends GenericTreeDaoTestCase<Long, Shelves, ShelvesDao> {
-    /**
-     * Logger for this class
-     */
+
     private static final Logger logger = LogManager.getLogger(ShelvesDaoTest.class.getName());
 
     ShelvesDao shelvesDao;
