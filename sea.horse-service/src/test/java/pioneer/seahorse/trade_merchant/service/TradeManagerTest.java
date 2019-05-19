@@ -1,4 +1,4 @@
-package pioneer.seahorse.admin.service;
+package pioneer.seahorse.trade_merchant.service;
 
 
 import static org.junit.Assert.assertEquals;
@@ -8,38 +8,38 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import pioneer.seahorse.admin.domain.User;
+import pioneer.seahorse.trade_merchant.domain.Trade;
 import pioneer.seahorse.base.service.GenericManagerTestCase;
 
-public class UserManagerTest extends GenericManagerTestCase<Long, User, UserManager> {
+public class TradeManagerTest extends GenericManagerTestCase<Long, Trade, TradeManager> {
 
-    private static final Logger logger = LogManager.getLogger(UserManagerTest.class.getName());
+    private static final Logger logger = LogManager.getLogger(TradeManagerTest.class.getName());
 
-    UserManager userManager;
+    TradeManager tradeManager;
 
-    public UserManagerTest() {
-        super(User.class);
+    public TradeManagerTest() {
+        super(Trade.class);
     }
 
     @Autowired
-    public void setUserManager(UserManager userManager) {
-        this.userManager = userManager;
+    public void setTradeManager(TradeManager tradeManager) {
+        this.tradeManager = tradeManager;
     }
 
     @Test
     public void testGetAll() {
-        List<User> all = this.userManager.getAll();
+        List<Trade> all = this.tradeManager.getAll();
         assertNotNull(all);
 //		assertEquals(100, all.size());
         if (logger.isInfoEnabled()) {
-            logger.info("testGetAll() - List<User> all={}", all); //$NON-NLS-1$
+            logger.info("testGetAll() - List<Trade> all={}", all); //$NON-NLS-1$
         }
     }
 
     @Test
     public void testSayHello() {
         String expected = "Hello, world!";
-        String result = this.userManager.sayHello("world");
+        String result = this.tradeManager.sayHello("world");
         if (logger.isInfoEnabled()) {
             logger.info("testSayHello() - String result={}", result); //$NON-NLS-1$
         }
@@ -47,4 +47,3 @@ public class UserManagerTest extends GenericManagerTestCase<Long, User, UserMana
         assertEquals(expected, result);
     }
 }
-
