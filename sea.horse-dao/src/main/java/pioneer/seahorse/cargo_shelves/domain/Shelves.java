@@ -10,7 +10,7 @@ import java.util.Set;
 @NamedQueries({ @NamedQuery(name = "Shelves.getRoot", query = "select s from Shelves s where s.parent is null") })
 public class Shelves extends BaseTreeEntity<Shelves> {
 
-    private static final long serialVersionUID = 4330355264188356170L;
+    private static final long serialVersionUID = 1017387340500414123L;
 
     @Column(name = "name")
     String name;

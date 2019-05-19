@@ -1,6 +1,8 @@
-pioneer\seahorse\cargo_shelves\dao\CargoDaoTest.class
-pioneer\seahorse\admin\dao\RoleDaoTest.class
-pioneer\seahorse\admin\dao\GroupDaoTest.class
 pioneer\seahorse\student\dao\StudentDaoTest.class
 pioneer\seahorse\admin\dao\UserDaoTest.class
 pioneer\seahorse\cargo_shelves\dao\ShelvesDaoTest.class
+pioneer\seahorse\trade_merchant\dao\MerchantDaoTest.class
+pioneer\seahorse\trade_merchant\dao\TradeDaoTest.class
+pioneer\seahorse\cargo_shelves\dao\CargoDaoTest.class
+pioneer\seahorse\admin\dao\RoleDaoTest.class
+pioneer\seahorse\admin\dao\GroupDaoTest.class

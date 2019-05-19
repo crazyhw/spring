@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "SH_Cargo")
 public class Cargo extends BaseEntity {
 
-    private static final long serialVersionUID = -7381157097295901181L;
+    private static final long serialVersionUID = -2393699715680994416L;
 
     @Column(name="name")
     String name;
