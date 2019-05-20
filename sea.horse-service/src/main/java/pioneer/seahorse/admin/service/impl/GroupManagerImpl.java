@@ -10,12 +10,12 @@ import pioneer.seahorse.base.service.Impl.GenericTreeManagerImpl;
 @Service(value = "groupManager")
 public class GroupManagerImpl extends GenericTreeManagerImpl<Group, Long> implements GroupManager {
 
-    GroupDao gropuDao;
+    GroupDao groupDao;
 
     @Autowired
-    public void setGroupDao(GroupDao groupDao) {
-        this.gropuDao = groupDao;
-        this.treeDao = this.gropuDao;
+    public void setGropuDao(GroupDao groupDao) {
+        this.groupDao = groupDao;
+        this.treeDao = this.groupDao;
         this.dao = this.treeDao;
     }
 

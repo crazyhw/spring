@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface CargoManager extends GenericManager<Cargo, Long> {
 
-    List<Cargo> findAll();
+    String sayHello(String name);
 
-    Cargo findbyCargoname(String cargoname);
+    List<Cargo> getAll();
 
 }
