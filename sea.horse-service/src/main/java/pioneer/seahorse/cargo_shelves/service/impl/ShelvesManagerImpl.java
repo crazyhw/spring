@@ -13,7 +13,7 @@ public class ShelvesManagerImpl extends GenericTreeManagerImpl<Shelves, Long> im
     ShelvesDao shelvesDao;
 
     @Autowired
-    public void setGropuDao(ShelvesDao shelvesDao) {
+    public void setShelvesDaoDao(ShelvesDao shelvesDao) {
         this.shelvesDao = shelvesDao;
         this.treeDao = this.shelvesDao;
         this.dao = this.treeDao;

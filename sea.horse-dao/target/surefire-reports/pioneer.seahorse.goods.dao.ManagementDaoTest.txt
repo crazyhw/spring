@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pioneer.seahorse.goods.dao.ManagementDaoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.393 s - in pioneer.seahorse.goods.dao.ManagementDaoTest

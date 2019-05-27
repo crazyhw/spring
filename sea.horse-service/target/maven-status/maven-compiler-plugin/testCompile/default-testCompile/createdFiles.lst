@@ -1,7 +1,13 @@
+pioneer\seahorse\admin\service\GroupGenerator.class
+pioneer\seahorse\goods\service\GoodsManagerTest.class
+pioneer\seahorse\admin\service\GroupManagerTest.class
 pioneer\seahorse\admin\service\UserManagerTest.class
 pioneer\seahorse\cargo_shelves\service\CargoManagerTest.class
+pioneer\seahorse\trade_merchant\service\MerchantGenerator.class
 pioneer\seahorse\cargo_shelves\service\ShelvesManagerTest.class
-pioneer\seahorse\admin\service\GroupGenerator.class
+pioneer\seahorse\goods\service\ManagementManagerTest.class
 pioneer\seahorse\student\service\StudentManagerTest.class
+pioneer\seahorse\goods\service\ManagementGenerator.class
+pioneer\seahorse\trade_merchant\service\MerchantManagerTest.class
 pioneer\seahorse\cargo_shelves\service\ShelvesGenerator.class
-pioneer\seahorse\admin\service\GroupManagerTest.class
+pioneer\seahorse\trade_merchant\service\TradeManagerTest.class

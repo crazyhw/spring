@@ -15,20 +15,20 @@ public class CargoManagerTest extends GenericManagerTestCase<Long, Cargo, CargoM
 
     private static final Logger logger = LogManager.getLogger(CargoManagerTest.class.getName());
 
-    CargoManager userManager;
+    CargoManager cargoManager;
 
     public CargoManagerTest() {
         super(Cargo.class);
     }
 
     @Autowired
-    public void setCargoManager(CargoManager userManager) {
-        this.userManager = userManager;
+    public void setCargoManager(CargoManager cargoManager) {
+        this.cargoManager = cargoManager;
     }
 
     @Test
     public void testGetAll() {
-        List<Cargo> all = this.userManager.getAll();
+        List<Cargo> all = this.cargoManager.getAll();
         assertNotNull(all);
 //		assertEquals(100, all.size());
         if (logger.isInfoEnabled()) {
@@ -39,7 +39,7 @@ public class CargoManagerTest extends GenericManagerTestCase<Long, Cargo, CargoM
     @Test
     public void testSayHello() {
         String expected = "Hello, world!";
-        String result = this.userManager.sayHello("world");
+        String result = this.cargoManager.sayHello("world");
         if (logger.isInfoEnabled()) {
             logger.info("testSayHello() - String result={}", result); //$NON-NLS-1$
         }
