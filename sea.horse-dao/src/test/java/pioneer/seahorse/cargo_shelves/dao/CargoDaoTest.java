@@ -9,6 +9,11 @@ import pioneer.seahorse.cargo_shelves.domain.Cargo;
 
 import java.util.List;
 
+/**
+ *
+ * @author 任鑫意
+ *
+ */
 public class CargoDaoTest extends GenericDaoTestCase<Long, Cargo, CargoDao> {
 
     private static final Logger logger = LogManager.getLogger(CargoDaoTest.class.getName());

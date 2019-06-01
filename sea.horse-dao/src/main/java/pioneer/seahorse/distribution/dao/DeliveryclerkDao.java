@@ -5,6 +5,6 @@ import pioneer.seahorse.base.dao.GenericTreeDao;
 import pioneer.seahorse.distribution.domain.Deliveryclerk;
 
 @Repository("deliveryclerkDao")
+public interface DeliveryclerkDao extends GenericTreeDao<Deliveryclerk, Long> {
 
-public interface DeliveryclerkDao extends GenericTreeDao<Deliveryclerk,Long>{
 }

@@ -11,6 +11,11 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ *
+ * @author 李培磊
+ *
+ */
 public class ManagementDaoTest extends GenericTreeDaoTestCase<Long, Management, ManagementDao> {
 
     private static final Logger logger = LogManager.getLogger(ManagementDaoTest.class.getName());

@@ -6,10 +6,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import pioneer.seahorse.base.service.GenericManagerTestCase;
 import pioneer.seahorse.cargo_shelves.domain.Cargo;
-
 import java.util.List;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 public class CargoManagerTest extends GenericManagerTestCase<Long, Cargo, CargoManager> {
 
@@ -29,21 +26,9 @@ public class CargoManagerTest extends GenericManagerTestCase<Long, Cargo, CargoM
     @Test
     public void testGetAll() {
         List<Cargo> all = this.cargoManager.getAll();
-        assertNotNull(all);
-//		assertEquals(100, all.size());
         if (logger.isInfoEnabled()) {
             logger.info("testGetAll() - List<Cargo> all={}", all); //$NON-NLS-1$
         }
     }
 
-    @Test
-    public void testSayHello() {
-        String expected = "Hello, world!";
-        String result = this.cargoManager.sayHello("world");
-        if (logger.isInfoEnabled()) {
-            logger.info("testSayHello() - String result={}", result); //$NON-NLS-1$
-        }
-
-        assertEquals(expected, result);
-    }
 }

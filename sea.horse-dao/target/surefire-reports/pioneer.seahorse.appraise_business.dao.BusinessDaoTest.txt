@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pioneer.seahorse.appraise_business.dao.BusinessDaoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.557 s - in pioneer.seahorse.appraise_business.dao.BusinessDaoTest

@@ -36,11 +36,6 @@ public class GroupManagerTest extends GenericTreeManagerTestCase<Long, Group, Gr
             }
         }
 
-        List<Group> rootGroupList = this.groupManager.getRoot();
-        assertNotNull(rootGroupList);
-        assertEquals(10, rootGroupList.size());
-
-
     }
 
 }

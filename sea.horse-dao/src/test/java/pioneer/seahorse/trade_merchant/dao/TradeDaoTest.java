@@ -9,6 +9,11 @@ import pioneer.seahorse.trade_merchant.domain.Trade;
 
 import java.util.List;
 
+/**
+ *
+ * @author 于靳鑫
+ *
+ */
 public class TradeDaoTest extends GenericDaoTestCase<Long, Trade, TradeDao> {
 
     private static final Logger logger = LogManager.getLogger(TradeDaoTest.class.getName());

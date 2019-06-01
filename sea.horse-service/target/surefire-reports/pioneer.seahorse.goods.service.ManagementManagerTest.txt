@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pioneer.seahorse.goods.service.ManagementManagerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.466 s - in pioneer.seahorse.goods.service.ManagementManagerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.566 s - in pioneer.seahorse.goods.service.ManagementManagerTest

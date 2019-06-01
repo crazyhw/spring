@@ -6,11 +6,14 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import pioneer.seahorse.base.dao.GenericTreeDaoTestCase;
 import pioneer.seahorse.cargo_shelves.domain.Shelves;
-
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 
+/**
+ *
+ * @author 任鑫意
+ *
+ */
 public class ShelvesDaoTest extends GenericTreeDaoTestCase<Long, Shelves, ShelvesDao> {
 
     private static final Logger logger = LogManager.getLogger(ShelvesDaoTest.class.getName());

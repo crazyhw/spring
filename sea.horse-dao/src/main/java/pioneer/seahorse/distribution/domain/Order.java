@@ -22,7 +22,7 @@ public class Order extends BaseEntity{
     Integer price;
 
     @ManyToOne
-    @JoinColumn(name = "shelves_ID")
+    @JoinColumn(name = "deliveryclerk_ID")
     Deliveryclerk deliveryclerk;
 
     public String getName() {
@@ -55,5 +55,5 @@ public class Order extends BaseEntity{
 
     public Deliveryclerk getDeliveryclerk() { return deliveryclerk; }
 
-    public void setShelves(Deliveryclerk deliveryclerk) { this.deliveryclerk = deliveryclerk; }
+    public void setDeliveryclerk(Deliveryclerk deliveryclerk) { this.deliveryclerk = deliveryclerk; }
 }

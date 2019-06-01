@@ -21,11 +21,6 @@ public class CargoManagerImpl extends GenericManagerImpl<Cargo, Long> implements
         this.dao = this.cargoDao;
     }
 
-    @Override
-    public String sayHello(String name) {
-        String result = "Hello, " + name + "!";
-        return result;
-    }
 
     @Override
     public List<Cargo> getAll() {

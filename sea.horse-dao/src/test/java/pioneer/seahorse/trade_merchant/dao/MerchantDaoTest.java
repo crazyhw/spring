@@ -11,6 +11,11 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ *
+ * @author 于靳鑫
+ *
+ */
 public class MerchantDaoTest extends GenericTreeDaoTestCase<Long, Merchant, MerchantDao> {
 
     private static final Logger logger = LogManager.getLogger(MerchantDaoTest.class.getName());

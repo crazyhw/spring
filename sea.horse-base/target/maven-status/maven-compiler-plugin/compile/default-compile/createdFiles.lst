@@ -7,6 +7,7 @@ pioneer\seahorse\base\service\GenericGenerator.class
 pioneer\seahorse\base\service\GenericManager.class
 pioneer\seahorse\base\service\GenericTreeManager.class
 pioneer\seahorse\base\dao\GenericTreeDao.class
+pioneer\seahorse\base\web\GenericController.class
 pioneer\seahorse\base\service\Impl\GenericManagerImpl.class
 pioneer\seahorse\base\dao\GenericDao.class
 pioneer\seahorse\base\dao\GenericDaoTestCase.class

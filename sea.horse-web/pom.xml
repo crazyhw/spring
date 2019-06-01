@@ -17,6 +17,18 @@
       <artifactId>junit</artifactId>
       <version>4.12</version>
     </dependency>
+      <dependency>
+          <groupId>pioneer</groupId>
+          <artifactId>sea.horse-dao</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>pioneer</groupId>
+          <artifactId>sea.horse-service</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
   </dependencies>
   <build>
   <plugins>

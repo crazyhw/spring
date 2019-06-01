@@ -9,6 +9,11 @@ import pioneer.seahorse.goods.domain.Goods;
 
 import java.util.List;
 
+/**
+ *
+ * @author 李培磊
+ *
+ */
 public class GoodsDaoTest extends GenericDaoTestCase<Long, Goods, GoodsDao> {
 
     private static final Logger logger = LogManager.getLogger(GoodsDaoTest.class.getName());

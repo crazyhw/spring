@@ -7,6 +7,8 @@ import pioneer.seahorse.cargo_shelves.dao.ShelvesDao;
 import pioneer.seahorse.cargo_shelves.domain.Shelves;
 import pioneer.seahorse.cargo_shelves.service.ShelvesManager;
 
+import java.util.List;
+
 @Service(value = "shelvesManager")
 public class ShelvesManagerImpl extends GenericTreeManagerImpl<Shelves, Long> implements ShelvesManager {
 
@@ -19,4 +21,9 @@ public class ShelvesManagerImpl extends GenericTreeManagerImpl<Shelves, Long> im
         this.dao = this.treeDao;
     }
 
+    @Override
+    public List<Shelves> getAll() {
+        List<Shelves> all = this.shelvesDao.findAll();
+        return all;
+    }
 }

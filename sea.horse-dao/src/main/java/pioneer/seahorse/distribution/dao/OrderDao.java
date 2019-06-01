@@ -10,6 +10,4 @@ public interface OrderDao extends GenericDao<Order,Long>{
 
 
 
-
-
 }
