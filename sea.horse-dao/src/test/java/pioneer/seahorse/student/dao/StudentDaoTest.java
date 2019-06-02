@@ -14,7 +14,8 @@ import pioneer.seahorse.student.domain.Student;
 import java.io.FileInputStream;
 import java.util.List;
 /**
- *
+ * POI读取excel表格存入数据库SH_Student
+ * 问题：读取了一遍但是存入了两遍
  * @author 任鑫意
  *
  */
@@ -31,7 +32,7 @@ public class StudentDaoTest extends GenericDaoTestCase<Long, Student,StudentDao>
         try{
             XSSFWorkbook wookbook = new XSSFWorkbook(new FileInputStream("D://Java//workspace//sea.horse//doc//software17.xlsx"));
             XSSFSheet sheet = wookbook.getSheetAt(0);
-            int rows = sheet.getPhysicalNumberOfRows();
+            int rows = sheet.getPhysicalNumberOfRows();//获取行数
             int cells = 0;
 
             for(int i=1;i<rows;i++)
