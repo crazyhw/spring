@@ -44,5 +44,14 @@ public class Appraise extends BaseEntity {
     public Business getBusiness() { return business; }
 
     public void setBusiness(Business business) { this.business = business; }
+
+    @Override
+    public String toString() {
+        return "Appraise{" +
+                "name='" + name + '\'' +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }
 

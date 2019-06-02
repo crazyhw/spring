@@ -26,4 +26,11 @@ public class Management extends BaseTreeEntity<Management> {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Management{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

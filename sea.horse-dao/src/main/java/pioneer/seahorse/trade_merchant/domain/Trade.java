@@ -49,4 +49,13 @@ public class Trade extends BaseEntity {
     public Merchant getMerchant() { return merchant; }
 
     public void setMerchant(Merchant merchant) { this.merchant = merchant; }
+
+    @Override
+    public String toString() {
+        return "Trade{" +
+                "name='" + name + '\'' +
+                ", number=" + number +
+                ", price=" + price +
+                '}';
+    }
 }

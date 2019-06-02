@@ -26,4 +26,19 @@ public class Shelves extends BaseTreeEntity<Shelves> {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Set<Cargo> getCargos() {
+        return cargos;
+    }
+
+    public void setCargos(Set<Cargo> cargos) {
+        this.cargos = cargos;
+    }
+
+    @Override
+    public String toString() {
+        return "Shelves{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

@@ -5,7 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import pioneer.seahorse.base.service.GenericGenerator;
 import pioneer.seahorse.trade_merchant.domain.Trade;
 import pioneer.seahorse.trade_merchant.domain.Merchant;
-
+/**
+ *
+ * @author 于靖鑫
+ *
+ */
 public class MerchantGenerator extends GenericGenerator {
 
     TradeManager tradeManager;

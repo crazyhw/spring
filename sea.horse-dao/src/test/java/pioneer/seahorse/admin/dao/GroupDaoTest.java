@@ -25,11 +25,11 @@ public class GroupDaoTest extends GenericTreeDaoTestCase<Long, Group, GroupDao> 
 	
 	@Test
 	public void testGetRoot() {
-		int root_size = 10;
+		int root_size = 3;
 		for(int i = 0; i < root_size; i++) {
 			Group group = new Group();
 			group.setName("group_" + i);
-			for(int j = 0; j < 10; j++) {
+			for(int j = 0; j < 3; j++) {
 				Group g = new Group();
 				g.setName("group_" + i + "_" + j);
 				g.setParent(group);

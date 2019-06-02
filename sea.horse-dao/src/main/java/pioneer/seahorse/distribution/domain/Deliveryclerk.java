@@ -25,4 +25,11 @@ public class Deliveryclerk extends BaseTreeEntity<Deliveryclerk> {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Deliveryclerk{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

@@ -26,4 +26,20 @@ public class Merchant extends BaseTreeEntity<Merchant> {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Set<Trade> getTrades() {
+        return trades;
+    }
+
+    public void setTrades(Set<Trade> trades) {
+        this.trades = trades;
+    }
+
+    @Override
+    public String toString() {
+        return "Merchant{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
 }

@@ -13,4 +13,6 @@ D:\Java\workspace\sea.horse\sea.horse-dao\src\test\java\pioneer\seahorse\cargo_s
 D:\Java\workspace\sea.horse\sea.horse-dao\src\test\java\pioneer\seahorse\dealer\dao\DealerDaoTest.java
 D:\Java\workspace\sea.horse\sea.horse-dao\src\test\java\pioneer\seahorse\goods\dao\GoodsDaoTest.java
 D:\Java\workspace\sea.horse\sea.horse-dao\src\test\java\pioneer\seahorse\admin\dao\UserDaoTest.java
+D:\Java\workspace\sea.horse\sea.horse-dao\src\test\java\pioneer\seahorse\pay\dao\CustomerDaoTest.java
+D:\Java\workspace\sea.horse\sea.horse-dao\src\test\java\pioneer\seahorse\pay\dao\BalanceDaoTest.java
 D:\Java\workspace\sea.horse\sea.horse-dao\src\test\java\pioneer\seahorse\distribution\dao\DeliveryclerkDaoTest.java

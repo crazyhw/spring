@@ -56,4 +56,14 @@ public class Order extends BaseEntity{
     public Deliveryclerk getDeliveryclerk() { return deliveryclerk; }
 
     public void setDeliveryclerk(Deliveryclerk deliveryclerk) { this.deliveryclerk = deliveryclerk; }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "name='" + name + '\'' +
+                ", orderno='" + orderno + '\'' +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }

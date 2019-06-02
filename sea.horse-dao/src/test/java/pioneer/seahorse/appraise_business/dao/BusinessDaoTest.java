@@ -27,11 +27,11 @@ public class BusinessDaoTest extends GenericTreeDaoTestCase<Long, Business, Busi
 
     @Test
     public void testGetRoot() {
-        int root_size = 10;
+        int root_size = 3;
         for(int i = 0; i < root_size; i++) {
             Business business = new Business();
             business.setName("business_" + i);
-            for(int j = 0; j < 10; j++) {
+            for(int j = 0; j < 3; j++) {
                 Business s = new Business();
                 s.setName("business_" + i + "_" + j);
                 s.setParent(business);

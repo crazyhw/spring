@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author 于靳鑫
+ * @author 于靖鑫
  *
  */
 public class TradeDaoTest extends GenericDaoTestCase<Long, Trade, TradeDao> {

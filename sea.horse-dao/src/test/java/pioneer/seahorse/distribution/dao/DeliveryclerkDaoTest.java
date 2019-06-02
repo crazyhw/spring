@@ -28,11 +28,11 @@ public class DeliveryclerkDaoTest extends GenericTreeDaoTestCase<Long, Deliveryc
 
     @Test
     public void testGetRoot() {
-        int root_size = 10;
+        int root_size = 3;
         for(int i = 0; i < root_size; i++) {
             Deliveryclerk deliveryclerk = new Deliveryclerk();
             deliveryclerk.setName("deliveryclerk_" + i);
-            for(int j = 0; j < 10; j++) {
+            for(int j = 0; j < 3; j++) {
                 Deliveryclerk s = new Deliveryclerk();
                 s.setName("deliveryclerk_" + i + "_" + j);
                 s.setParent(deliveryclerk);

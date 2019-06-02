@@ -45,4 +45,13 @@ public class Cargo extends BaseEntity {
     public Shelves getShelves() { return shelves; }
 
     public void setShelves(Shelves shelves) { this.shelves = shelves; }
+
+    @Override
+    public String toString() {
+        return "Cargo{" +
+                "name='" + name + '\'' +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }

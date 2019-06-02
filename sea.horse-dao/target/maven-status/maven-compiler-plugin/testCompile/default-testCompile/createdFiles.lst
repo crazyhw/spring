@@ -10,7 +10,9 @@ pioneer\seahorse\trade_merchant\dao\MerchantDaoTest.class
 pioneer\seahorse\trade_merchant\dao\TradeDaoTest.class
 pioneer\seahorse\dealer\dao\MarketDaoTest.class
 pioneer\seahorse\cargo_shelves\dao\CargoDaoTest.class
+pioneer\seahorse\pay\dao\BalanceDaoTest.class
 pioneer\seahorse\admin\dao\RoleDaoTest.class
 pioneer\seahorse\admin\dao\GroupDaoTest.class
 pioneer\seahorse\appraise_business\dao\AppraiseDaoTest.class
 pioneer\seahorse\distribution\dao\DeliveryclerkDaoTest.class
+pioneer\seahorse\pay\dao\CustomerDaoTest.class

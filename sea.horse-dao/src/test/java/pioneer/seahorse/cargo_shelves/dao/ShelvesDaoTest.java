@@ -28,11 +28,11 @@ public class ShelvesDaoTest extends GenericTreeDaoTestCase<Long, Shelves, Shelve
 
     @Test
     public void testGetRoot() {
-        int root_size = 10;
+        int root_size = 3;
         for(int i = 0; i < root_size; i++) {
             Shelves shelves = new Shelves();
             shelves.setName("shelves_" + i);
-            for(int j = 0; j < 10; j++) {
+            for(int j = 0; j < 3; j++) {
                 Shelves s = new Shelves();
                 s.setName("shelves_" + i + "_" + j);
                 s.setParent(shelves);

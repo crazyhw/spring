@@ -20,7 +20,7 @@ import java.util.List;
  * @author <a href="mailto:ming616@gmail.com">Liu Xiaoming</a>
  */
 @NoRepositoryBean
-public abstract interface GenericTreeDao<T extends BaseTreeEntity<T>, PK extends Serializable>
+public interface GenericTreeDao<T extends BaseTreeEntity<T>, PK extends Serializable>
 		extends GenericDao<T, PK> {
 	List<T> getRoot();
 }

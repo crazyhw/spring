@@ -30,11 +30,11 @@ public class MarketDaoTest extends GenericTreeDaoTestCase<Long, Market, MarketDa
 
     @Test
     public void testGetRoot() {
-        int root_size = 10;
+        int root_size = 3;
         for(int i = 0; i < root_size; i++) {
             Market market = new Market();
             market.setName("market_" + i);
-            for(int j = 0; j < 10; j++) {
+            for(int j = 0; j < 3; j++) {
                 Market s = new Market();
                 s.setName("market_" + i + "_" + j);
                 s.setParent(market);

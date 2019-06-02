@@ -32,6 +32,12 @@ public class Group extends BaseTreeEntity<Group> {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Group{" +
+				"name='" + name + '\'' +
+				", users=" + users +
+				'}';
+	}
 }

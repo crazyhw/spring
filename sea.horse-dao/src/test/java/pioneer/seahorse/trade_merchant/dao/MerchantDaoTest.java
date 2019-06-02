@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 
 /**
  *
- * @author 于靳鑫
+ * @author 于靖鑫
  *
  */
 public class MerchantDaoTest extends GenericTreeDaoTestCase<Long, Merchant, MerchantDao> {
@@ -30,11 +30,11 @@ public class MerchantDaoTest extends GenericTreeDaoTestCase<Long, Merchant, Merc
 
     @Test
     public void testGetRoot() {
-        int root_size = 10;
+        int root_size = 3;
         for(int i = 0; i < root_size; i++) {
             Merchant merchant = new Merchant();
             merchant.setName("merchant_" + i);
-            for(int j = 0; j < 10; j++) {
+            for(int j = 0; j < 3; j++) {
                 Merchant s = new Merchant();
                 s.setName("merchant_" + i + "_" + j);
                 s.setParent(merchant);
@@ -47,8 +47,6 @@ public class MerchantDaoTest extends GenericTreeDaoTestCase<Long, Merchant, Merc
         if (logger.isInfoEnabled()) {
             logger.info("testGetRoot() - List<Merchant> roots={}", roots); //$NON-NLS-1$
         }
-
-
     }
 
 }

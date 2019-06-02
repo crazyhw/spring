@@ -49,4 +49,13 @@ public class Goods extends BaseEntity {
     public void setManagement(Management management) {
         this.management = management;
     }
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "name='" + name + '\'' +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }

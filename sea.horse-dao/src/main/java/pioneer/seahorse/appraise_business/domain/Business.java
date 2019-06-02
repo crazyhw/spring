@@ -26,4 +26,11 @@ public class Business extends BaseTreeEntity<Business> {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Business{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

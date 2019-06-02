@@ -6,6 +6,11 @@ import pioneer.seahorse.base.service.GenericGenerator;
 import pioneer.seahorse.cargo_shelves.domain.Cargo;
 import pioneer.seahorse.cargo_shelves.domain.Shelves;
 
+/**
+ *
+ * @author 任鑫意
+ *
+ */
 public class ShelvesGenerator extends GenericGenerator {
 
     CargoManager cargoManager;
@@ -23,22 +28,22 @@ public class ShelvesGenerator extends GenericGenerator {
 
     @Test
     public void AddShelves() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             Shelves shelves = new Shelves();
             shelves.setName("shelves_" + i);
             this.shelvesManager.save(shelves);
-            for (int j = 0; j < 10; j++) {
+            for (int j = 0; j < 3; j++) {
                 Shelves subshelves = new Shelves();
                 subshelves.setName("subshelves_" + i + "_" + j);
                 subshelves.setParent(shelves);
                 this.shelvesManager.save(subshelves);
+                this.AddCargo(shelves);
             }
         }
     }
 
-    @Test
     public void AddCargo(Shelves shelves) {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             Cargo cargo = new Cargo();
             cargo.setName("cargo_" + i);
             cargo.setCount(i+10);

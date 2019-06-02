@@ -10,44 +10,42 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "SH_Student")
 public class Student extends BaseEntity {
+
+    @Column(name = "grade")
+    String grade;
+    @Column(name = "major")
+    String major;
+    @Column(name = "CLASS")
+    String CLASS;
     @Column(name = "num")
-    Integer num;
+    String num;
     @Column(name = "name")
     String name;
     @Column(name = "sex")
     String sex;
-    @Column(name = "cla")
-    String cla;
 
-    public Integer getNum() {
-        return num;
-    }
+    public String getGrade() { return grade; }
 
-    public void setNum(Integer num) {
-        this.num = num;
-    }
+    public void setGrade(String grade) { this.grade = grade; }
 
-    public String getName() {
-        return name;
-    }
+    public String getMajor() { return major; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setMajor(String major) { this.major = major; }
 
-    public String getSex() {
-        return sex;
-    }
+    public String getCLASS() { return CLASS; }
 
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
+    public void setCLASS(String CLASS) { this.CLASS = CLASS; }
 
-    public String getCla() {
-        return cla;
-    }
+    public String getNum() { return num; }
 
-    public void setCla(String cla) {
-        this.cla = cla;
-    }
+    public void setNum(String num) { this.num = num; }
+
+    public String getName() { return name; }
+
+    public void setName(String name) { this.name = name; }
+
+    public String getSex() { return sex; }
+
+    public void setSex(String sex) { this.sex = sex; }
+
 }

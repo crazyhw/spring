@@ -43,4 +43,13 @@ public class Dealer extends BaseEntity {
     public void setMarket(Market market) {
         this.market = market;
     }
+
+    @Override
+    public String toString() {
+        return "Dealer{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", contact=" + contact +
+                '}';
+    }
 }
