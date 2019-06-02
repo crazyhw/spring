@@ -2,6 +2,7 @@ package pioneer.seahorse.admin.service;
 
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,6 +29,8 @@ public class UserManagerTest extends GenericManagerTestCase<Long, User, UserMana
     @Test
     public void testGetAll() {
         List<User> all = this.userManager.getAll();
+        assertNotNull(all);
+//		assertEquals(100, all.size());
         if (logger.isInfoEnabled()) {
             logger.info("testGetAll() - List<User> all={}", all); //$NON-NLS-1$
         }

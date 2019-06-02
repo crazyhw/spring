@@ -2,10 +2,9 @@ package pioneer.seahorse.trade_merchant.service;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import pioneer.seahorse.trade_merchant.domain.Merchant;
 import pioneer.seahorse.base.service.GenericTreeManagerTestCase;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import pioneer.seahorse.trade_merchant.domain.Merchant;
+
 import java.util.List;
 
 public class MerchantManagerTest extends GenericTreeManagerTestCase<Long, Merchant, MerchantManager> {
@@ -23,24 +22,11 @@ public class MerchantManagerTest extends GenericTreeManagerTestCase<Long, Mercha
     }
 
     @Test
-    public void testAddMerchant() {
-        for (int i = 0; i < 10; i++) {
-            Merchant merchant = new Merchant();
-            merchant.setName("merchant_" + i);
-            merchant = this.merchantManager.save(merchant);
-            for (int j = 0; j < 10; j++) {
-                Merchant submerchant = new Merchant();
-                submerchant.setName("submerchant_" + i + "_" + j);
-                submerchant.setParent(merchant);
-                submerchant = this.merchantManager.save(submerchant);
-            }
+    public void testGetAll() {
+        List<Merchant> all = this.merchantManager.getAll();
+        if (logger.isInfoEnabled()) {
+            logger.info("testGetAll() - List<Merchant> all={}", all); //$NON-NLS-1$
         }
-
-        List<Merchant> rootMerchantList = this.merchantManager.getRoot();
-        assertNotNull(rootMerchantList);
-        assertEquals(10, rootMerchantList.size());
-
-
     }
 
 }

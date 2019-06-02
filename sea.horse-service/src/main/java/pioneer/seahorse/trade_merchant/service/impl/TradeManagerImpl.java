@@ -21,11 +21,7 @@ public class TradeManagerImpl extends GenericManagerImpl<Trade, Long> implements
         this.dao = this.tradeDao;
     }
 
-    @Override
-    public String sayHello(String name) {
-        String result = "Hello, " + name + "!";
-        return result;
-    }
+
 
     @Override
     public List<Trade> getAll() {
@@ -34,4 +30,3 @@ public class TradeManagerImpl extends GenericManagerImpl<Trade, Long> implements
     }
 
 }
-

@@ -7,6 +7,8 @@ import pioneer.seahorse.trade_merchant.domain.Merchant;
 import pioneer.seahorse.trade_merchant.service.MerchantManager;
 import pioneer.seahorse.base.service.Impl.GenericTreeManagerImpl;
 
+import java.util.List;
+
 @Service(value = "merchantManager")
 public class MerchantManagerImpl extends GenericTreeManagerImpl<Merchant, Long> implements MerchantManager {
 
@@ -19,4 +21,9 @@ public class MerchantManagerImpl extends GenericTreeManagerImpl<Merchant, Long> 
         this.dao = this.treeDao;
     }
 
+    @Override
+    public List<Merchant> getAll() {
+        List<Merchant> all = this.merchantDao.findAll();
+        return all;
+    }
 }

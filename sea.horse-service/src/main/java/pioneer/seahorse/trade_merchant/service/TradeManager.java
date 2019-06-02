@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface TradeManager extends GenericManager<Trade, Long> {
 
-    String sayHello(String name);
 
     List<Trade> getAll();
 
