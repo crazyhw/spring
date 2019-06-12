@@ -1,0 +1,1 @@
+package pioneer.seahorse.dealer.domain;
