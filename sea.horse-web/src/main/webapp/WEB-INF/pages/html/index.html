@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-        <div class="table-responsive">
+            <div class="table-responsive">
                 <table class="table table-striped" id="xinxi">
                     <thead>
                     <tr>
@@ -108,61 +108,61 @@
 
             <input type="button" class="btn btn-primary" style="display:none;float:right" id="return" value="返回" onclick="getdata()"/>
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 10%">
-        <div class="modal-dialog" style="width:300px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">添加学生</h4>
-                </div>
-                <div class="modal-body" id="myModalBody">
-                    <div class="input-group my-center">
-                        <span class="input-group-addon">学号</span>
-                        <input type="text" class="form-control" placeholder="请输入学生学号" id="num">
-                    </div>
-                    <br/>
-                    <div class="input-group my-center">
-                        <span class="input-group-addon">姓名</span>
-                        <input type="text" class="form-control" placeholder="请输入学生姓名" id="name">
-                    </div>
-                    <br/>
-                    <div class="input-group my-center">
-                        <span class="input-group-addon">性别</span>
-                        <input type="text" class="form-control" placeholder="请输入学生性别" id="sex">
-                    </div>
-                    <br/>
-                    <div class="input-group my-center">
-                        <span class="input-group-addon">专业</span>
-                        <input type="text" class="form-control" placeholder="请输入学生专业" id="major">
-                    </div>
-                    <br/>
-                    <div class="input-group my-center">
-                        <span class="input-group-addon">年级</span>
-                        <input type="text" class="form-control" placeholder="请输入学生年级" id="grade">
-                    </div>
-                    <br/>
-                    <div class="input-group my-center">
-                        <span class="input-group-addon">班级</span>
-                        <input type="text" class="form-control" placeholder="请输入学生班级" id="cla">
-                    </div>
-                    <br/>
-                </div>
-                <div class="modal-footer">
-                    <button id="modal-submit" type="button" class="btn btn-primary" onclick="addStudent()">确认</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal -->
-    </div>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 10%">
+                <div class="modal-dialog" style="width:300px">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="clearModal()"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">添加学生</h4>
+                        </div>
+                        <div class="modal-body" id="myModalBody">
+                            <div class="input-group my-center">
+                                <span class="input-group-addon">学号</span>
+                                <input type="text" class="form-control" placeholder="请输入学生学号" id="num">
+                            </div>
+                            <br/>
+                            <div class="input-group my-center">
+                                <span class="input-group-addon">姓名</span>
+                                <input type="text" class="form-control" placeholder="请输入学生姓名" id="name">
+                            </div>
+                            <br/>
+                            <div class="input-group my-center">
+                                <span class="input-group-addon">性别</span>
+                                <input type="text" class="form-control" placeholder="请输入学生性别" id="sex">
+                            </div>
+                            <br/>
+                            <div class="input-group my-center">
+                                <span class="input-group-addon">专业</span>
+                                <input type="text" class="form-control" placeholder="请输入学生专业" id="major">
+                            </div>
+                            <br/>
+                            <div class="input-group my-center">
+                                <span class="input-group-addon">年级</span>
+                                <input type="text" class="form-control" placeholder="请输入学生年级" id="grade">
+                            </div>
+                            <br/>
+                            <div class="input-group my-center">
+                                <span class="input-group-addon">班级</span>
+                                <input type="text" class="form-control" placeholder="请输入学生班级" id="cla">
+                            </div>
+                            <br/>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="modal-submit" type="button" class="btn btn-primary" onclick="addStudent()">确认</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
         </div>
-</div>
+    </div>
 </div>
 
 
 <footer>
-<!--
-    <p class="pull-right">©2019 Company</p>
--->
+    <!--
+        <p class="pull-right">©2019 Company</p>
+    -->
 </footer>
 
 <script type="application/javascript">
@@ -218,7 +218,7 @@
                     }
                 },
                 error:function(){
-                  alert("删除失败!");
+                    alert("删除失败!");
                 },
             })
         }
@@ -255,10 +255,8 @@
 
 
     $(document).on("click", ".update", function () {
+        clearModal();
         var model = $("#myModalBody").children("div").find("input");
-        for(var i = 0; i < 6; i++) {
-            model.eq(i).val("");
-        }
         var id = $(this).parents("tr").find("th").eq(0).attr("id");
         var data = $(this).parents("tr").find("th");
         for (var i = 0, j = 0; i < 6; i++, j++) {
@@ -266,6 +264,12 @@
         }
         $("#modal-submit").attr("onclick", "updateStudent("+id+")");
     });
+    function clearModal() {
+        var properties = $("#myModalBody").children("div").find("input");
+        for(var i = 0; i < 6; i++) {
+            properties.eq(i).val("");
+        }
+    }
     function updateStudent(id) {
         var student = {};
         student.id=id;
@@ -308,18 +312,18 @@
             success:function(data){
                 if (data!=null) {
                     $("tbody").children().remove();
-                        $("tbody").append(
-                            "<tr>"
-                            + "<th scope='row' id='"+data.id+"'>" + data.num + "</th>"
-                            + "<th>" + data.name + "</th>"
-                            + "<th>" + data.sex + "</th>"
-                            + "<th>" + data.major + "</th>"
-                            + "<th>" + data.grade + "</th>"
-                            + "<th>" + data.cla + "</th>"
-                            + "<th>" + "<button class='btn btn-primary btn-sm update ' data-toggle='modal' data-target='#myModal'>修改</button>"
-                            + "<button class='btn btn-danger btn-sm delete'>删除</button>" + "</th>"
-                            + "</tr>"
-                        )
+                    $("tbody").append(
+                        "<tr>"
+                        + "<th scope='row' id='"+data.id+"'>" + data.num + "</th>"
+                        + "<th>" + data.name + "</th>"
+                        + "<th>" + data.sex + "</th>"
+                        + "<th>" + data.major + "</th>"
+                        + "<th>" + data.grade + "</th>"
+                        + "<th>" + data.cla + "</th>"
+                        + "<th>" + "<button class='btn btn-primary btn-sm update ' data-toggle='modal' data-target='#myModal'>修改</button>"
+                        + "<button class='btn btn-danger btn-sm delete'>删除</button>" + "</th>"
+                        + "</tr>"
+                    )
                     document.getElementById("return").style.display="block";
                 }else{
                     alert("未找到！");
