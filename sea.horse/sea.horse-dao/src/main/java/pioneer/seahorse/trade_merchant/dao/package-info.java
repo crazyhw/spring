@@ -1,0 +1,1 @@
+package pioneer.seahorse.trade_merchant.dao;
